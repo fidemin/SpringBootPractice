@@ -10,5 +10,5 @@ If you want to build to jar, use command below
 # Execution
 
 ```bash
-java -jar build/libs/springboot-0.0.1-SNAPSHOT.jar
+java -jar build/libs/spring-boot-practice.jar
 ```

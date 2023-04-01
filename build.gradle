@@ -30,3 +30,10 @@ dependencies {
 tasks.named('test') {
 	useJUnitPlatform()
 }
+
+bootJar {
+	// jar file name need to be always same
+	archiveFileName = "spring-boot-practice.jar"
+	// clean build directory before creating jar file
+	dependsOn(cleanBootJar)
+}
