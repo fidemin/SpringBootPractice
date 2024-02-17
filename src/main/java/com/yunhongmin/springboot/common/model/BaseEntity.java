@@ -13,19 +13,19 @@ import java.util.Date;
 @Getter
 @Setter
 public class BaseEntity {
-    @Column(name = "created_at")
+    @Column(name = "created_at", nullable = false)
     private Date createdAt;
 
-    @Column(name = "modified_at")
-    private Date modifiedAt;
+    @Column(name = "updated_at", nullable = false)
+    private Date updatedAt;
 
     @PrePersist
     void createdAt() {
-        this.createdAt = this.modifiedAt = new Date();
+        this.createdAt = this.updatedAt = new Date();
     }
 
     @PreUpdate
     void updatedAt() {
-        this.modifiedAt = new Date();
+        this.updatedAt = new Date();
     }
 }
